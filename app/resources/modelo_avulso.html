@@ -1,0 +1,64 @@
+<!--[main]-->
+<table border="0" style="height: 281px; width: 100%; border-collapse: collapse;">
+    <tbody>
+    <tr style="height: 71px;">
+    <td style="width: 34.3192%; height: 71px;"><img src="app/images/icon.png" width="70" height="70" alt="" /></td>
+    <td style="width: 65.6807%; height: 71px;" colspan="2">
+    <p>SISTEMA PDV - {$empresa}</p>
+    <p>Rua 106, n&ordm; 312</p>
+    </td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 99.9999%; height: 21px; text-align: center;" colspan="3"><strong><strong>Dados do cliente - Pedido ({$pedido}) </strong></strong><hr /><strong></strong></td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 34.3192%; height: 21px; text-align: left;"><strong>Tipo de Pedido:</strong></td>
+    <td style="width: 65.6807%; height: 21px;" colspan="2">{$tipo}</td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 34.3192%; height: 21px; text-align: left;"><b>Mesa:</b></td>
+    <td style="width: 65.6807%; height: 21px;" colspan="2">{$mesa}</td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 34.3192%; height: 21px; text-align: left;"><b>Atendente:</b></td>
+    <td style="width: 65.6807%; height: 21px;" colspan="2">{$usuario}</td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 34.3192%; height: 21px; text-align: left;"><strong>Data e hor&aacute;rio</strong>:</td>
+    <td style="width: 65.6807%; height: 21px;" colspan="2">{$data}</td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 99.9999%; height: 21px; text-align: center;" colspan="3"><strong><strong>Itens</strong></strong><hr /><strong></strong></td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 34.3192%; height: 21px;"><em><strong>Desc</strong></em></td>
+    <td style="width: 27.4178%; height: 21px;"><em><strong>Qtd</strong></em></td>
+    <td style="width: 38.2629%; height: 21px;"><em><strong>valor</strong></em></td>
+    </tr>
+      <!--[itens]-->
+    <tr style="height: 21px;">
+    <td style="width: 50%; height: 21px;">{$desc}</td>
+    <td style="width: 20%; height: 21px;">{$qtd}</td>
+    <td style="width: 30%; height: 21px;">number_format({$valor}, 2, ',', '.')</td>
+    </tr>
+      <!--[/itens]-->
+    <tr>
+    <td style="width: 34.3192%; text-align: center;" colspan="3"><em><strong>Observa&ccedil;&otilde;es do pedido</strong></em></td>
+    </tr>
+    <tr>
+    <td style="width: 34.3192%; text-align: left;" colspan="3"><hr />{$obs}</td>
+    </tr>
+    <tr>
+    <td style="width: 34.3192%; text-align: right;" colspan="2">
+    <h2><strong>Total:</strong></h2>
+    </td>
+    <td style="width: 38.2629%;">
+    <h2><strong>number_format({$total}, 2, ',', '.')</strong></h2>
+    </td>
+    </tr>
+    <tr style="height: 21px;">
+    <td style="width: 99.9999%; height: 21px; text-align: center;" colspan="3">www.site.com.br</td>
+    </tr>
+    </tbody>
+    </table>
+    <!--[/main]-->

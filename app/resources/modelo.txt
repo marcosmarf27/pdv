@@ -1,0 +1,38 @@
+<!--[main]-->
+
+== Novo Pedido ==
+
+Nº do Pedido : {$gloria_food_id}
+Pedido aceito em: {$accepted_at}
+Tipo de Pagamento: {$used_payment_methods}
+
+TOTAL:R$  {$total_price}
+
+== DADOS DO CLIENTE ==
+
+NOME: {$client_first_name} - {$client_last_name}
+EMAIL: {$client_email}
+TEL: {$client_phone}
+END: {$client_address}
+
+==== ITENS =====
+
+<!--[itens]-->
+{$item}
+{$opcao} 
+-----------------------
+<!--[/itens]-->
+
+====FIM DO PEDIDO===
+
+Este pedido foi recebido e confirmado instantaneamente em tempo real 
+através do aplicativo: https://lollipoppizzaria.com.br
+
+Olá, {$client_first_name} seu pedido está saindo para entrega em instantes...
+
+Qualquer dúvida nos envie whatsapp.
+
+MUITO OBRIGADO PELA PREFERÊNCIA.
+                
+                
+<!--[/main]-->

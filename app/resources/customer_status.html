@@ -1,0 +1,137 @@
+<!--[main]-->
+<link href="app/resources/styles.css" rel="stylesheet" type="text/css" media="screen" />
+
+
+<div id="map"></div>
+<table style="width: 100%">
+    <tr>
+        <td>
+            <table class="customform" style="width:100%">
+                <tr>
+                    <td class="sectiontitle" colspan="5">Pedido do Cliente</td>
+                </tr>
+                <tbody class="formdata">
+                    <tr class="oddrow">
+                        <td style="font-weight:bold" align="center" colspan="2">Nº pedido</td>
+                        <td style="font-weight:bold" align="center" colspan="3">Cliente</td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">{$id}</td>
+                        <td align="center" colspan="3"><a generator="adianti" href="index.php?class=CustomerFormView&method=onEdit&id={$id}">{$cliente} (Clique para Editar)</a></td>
+                    </tr>
+                    <tr class="oddrow">
+                        <td style="font-weight:bold" align="center" colspan="2">Whatsapp</td>
+                        <td style="font-weight:bold" align="center" colspan="3">Endereço</td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">{$telefone}</td>
+                        <td align="center" colspan="3">{$endereco}</td>
+                        <td align="center"></td>
+                    </tr>
+                    <tr class="oddrow">
+                        <td style="font-weight:bold" align="center" colspan="2">Data pedido</td>
+                        <td style="font-weight:bold" align="center" colspan="1">Status</td>
+                        <td style="font-weight:bold" align="center" colspan="2">Email</td>
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">{$data_pedido}</td>
+                        <td align="center" colspan="1">{$status}</td>
+                        <td align="center" colspan="2">{$email}</td>
+                    </tr>
+                    <tr class="oddrow">
+                        <td style="font-weight:bold" align="center" colspan="2">Pagamento</td>
+                        <td style="font-weight:bold" align="center" colspan="3">Instruções (Troco) </td>
+                       
+                    </tr>
+                    <tr>
+                        <td align="center" colspan="2">{$pagamento}</td>
+                        <td align="center"  colspan="3">{$instrucoes}</td>
+                      
+                    </tr>
+                </tbody>
+            </table>
+        </td>
+    </tr>
+   
+    <tr>
+        <td>
+            <table class="customform" style="width:100%">
+                <tr>
+                    <td class="sectiontitle" colspan="5">Itens do pedido</td>
+                </tr>
+                <tbody class="formdata">
+                    <tr class="oddrow">
+                       
+                        <td align="center" colspan="5">Descrição dos Itens</td>
+                      
+                      
+                        
+                       
+                    </tr>
+                    <!--[sale-details]-->
+                    <tr  style ="background: {$cor};">
+                     
+                        <td align="left" colspan="4">{$descricao}</td>
+                        <td align="right" colspan="1"  ><b>{$valor}</b></td>
+                        
+                       
+                      
+                    </tr>
+                    <!--[/sale-details]-->
+                         <!--[sale-totals]-->
+                         <tr bgcolor="#CECECE">
+                            <td align="right" colspan="4" ><b> Total: </b></td>
+                            <td align="right" colspan="1"><b><div class="{$class} role="alert">
+                                {$total}
+                              </div>  </b></td>
+                        </tr>
+                        <!--[/sale-totals]-->
+
+                   
+
+                    
+                 
+                    <tr>
+                        <td style="background: whiteSmoke; border-top:1px solid grey" colspan="6" align="right"> <a generator="adianti" href="index.php?class=CustomerStatusViewDelivery&method=onCheckStatus&key={$id_interno}&customer_name={$name}" class="btn btn-success"> <span class="fa fa-plus-square"></span> Notificar Cliente </a></td>
+                    </tr>
+                  
+                </tbody>
+            </table>
+        </td>
+    </tr>
+
+         
+
+
+                      
+</table>
+
+
+
+<script>
+
+
+    // Initialize and add the map
+function initMap() {
+  // The location of Uluru
+  const uluru = { lat: {$lat}, lng: {$lon}};
+  // The map, centered at Uluru
+  const map = new google.maps.Map(document.getElementById("map"), {
+    zoom: 20,
+    center: uluru,
+  });
+  // The marker, positioned at Uluru
+  const marker = new google.maps.Marker({
+    position: uluru,
+    map: map,
+  });
+}
+</script>
+
+<script
+src="https://maps.googleapis.com/maps/api/js?key=AIzaSyCMM9ozKgo1D4ZIEKWUR2_IOSFBxnbVZEE&callback=initMap&libraries=&v=weekly"
+async
+></script>
+
+
+<!--[/main]-->
