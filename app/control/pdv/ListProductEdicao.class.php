@@ -9,7 +9,7 @@
  * @copyright  Copyright (c) 2006 Adianti Solutions Ltd. (http://www.adianti.com.br)
  * @license    http://www.adianti.com.br/framework-license
  */
-class ListProductEdicao extends TPage
+class PP extends TPage
 {
     protected $datagrid; // listing
     protected $pageNavigation;
