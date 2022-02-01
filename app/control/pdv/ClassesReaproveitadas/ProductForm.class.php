@@ -57,7 +57,7 @@ class ProductForm extends TPage
         $images->enablePopover('Preview', '<img style="max-width:300px" src="download.php?file={file_name}">');
         
         $id->setEditable( FALSE );
-        $unity->addItems( ['PC' => 'Pieces', 'GR' => 'Grain'] );
+        $unity->addItems( ['PC' => 'Peças', 'GR' => 'Grãos', 'UN' => 'Unidades (Controlar estoque)'] );
         $stock->setNumericMask(2, ',', '.', TRUE); // TRUE: process mask when editing and saving
         $sale_price->setNumericMask(2, ',', '.', TRUE); // TRUE: process mask when editing and saving
         $this->form->appendPage('Produtos');
