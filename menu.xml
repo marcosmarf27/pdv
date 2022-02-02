@@ -123,6 +123,12 @@
   <menuitem label="Delivery">
     <action>DeliveryAdmin</action>
     <icon>fas:motorcycle fa-fw</icon>
+    <menu>
+      <menuitem label="Acessar Painel adminstrativo">
+        <action>https://www.gloriafood.com/admin/public/login</action>
+        <icon>fas:external-link-alt fa-fw</icon>
+      </menuitem>
+    </menu>
   </menuitem>
   <menuitem label="Cardapio ">
     <icon>fas:book-open fa-fw</icon>
@@ -147,6 +153,12 @@
       <menuitem label="Produtos">
         <action>ProductList</action>
         <icon>fas:angle-right fa-fw</icon>
+        <menu>
+          <menuitem label="Editar Estoque em lote">
+            <action>ListProductEdicao</action>
+            <icon>fas:box fa-fw</icon>
+          </menuitem>
+        </menu>
       </menuitem>
     </menu>
   </menuitem>

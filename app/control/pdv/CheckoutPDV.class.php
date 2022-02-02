@@ -286,6 +286,15 @@ class CheckoutPDV extends TWindow
 
 
                 $cart_items = TSession::getValue('cart_items');
+                $itensfaltantes  = EstoqueService::checaEstoque($cart_items);
+
+                if($itensfaltantes){
+
+                    throw new Exception('O pedido não pode ser feito porque os seguintes itens: <b>' . implode(',', $itensfaltantes) . '</b> estão com estoque baixo do que foi solicitado!');
+                  
+                }
+
+
 
                 if($cart_items)
                 {
@@ -348,6 +357,14 @@ class CheckoutPDV extends TWindow
     
     
                     $cart_items = TSession::getValue('cart_items');
+
+                    $itensfaltantes  = EstoqueService::checaEstoque($cart_items);
+
+                    if($itensfaltantes){
+    
+                        throw new Exception('O pedido não pode ser feito porque os seguintes itens: <b>' . implode(',', $itensfaltantes) . '</b> estão com estoque baixo do que foi solicitado!');
+                      
+                    }
     
                     if($cart_items)
                     {
