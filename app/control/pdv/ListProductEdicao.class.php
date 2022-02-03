@@ -9,7 +9,7 @@
  * @copyright  Copyright (c) 2006 Adianti Solutions Ltd. (http://www.adianti.com.br)
  * @license    http://www.adianti.com.br/framework-license
  */
-class PP extends TPage
+class ListProductEdicao extends TPage
 {
     protected $datagrid; // listing
     protected $pageNavigation;
@@ -31,11 +31,11 @@ class PP extends TPage
         
         // creates the form
         $this->form = new BootstrapFormBuilder('form_search_Product');
-        $this->form->setFormTitle(_t('Batch instant update list'));
+        $this->form->setFormTitle('ALTERAÇÃO DO ESTOQUE');
         
         // create the form fields
         $description = new TEntry('description');
-        $this->form->addFields( [new TLabel('Description')], [$description] );
+        $this->form->addFields( [new TLabel('Descrição')], [$description] );
         
         $this->form->addAction(_t('Find'), new TAction(array($this, 'onSearch')), 'fa:search');
         
